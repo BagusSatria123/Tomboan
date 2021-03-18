@@ -24,12 +24,12 @@ session_start();
                   <li class="<?php $aktif = ($_GET['page'] == 'about') ? 'active' : '';
                               echo $aktif; ?>"><a href="?page=about">Tentang</a></li>
 
-                  <li class="<?php $aktif = ($_GET['page'] == 'about') ? 'active' : '';
-                              echo $aktif; ?>"><a href="?page=about">Woro-Woro</a></li>
+                  <li class="<?php $aktif = ($_GET['page'] == 'woro') ? 'active' : '';
+                              echo $aktif; ?>"><a href="?page=woro">Woro-Woro</a></li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'aturan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Aturan</a>
+                    <a href="?page=aturan">Aturan</a>
                     <ul class="dropdown arrow-top">
                       <?php
                       $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
@@ -109,7 +109,7 @@ session_start();
                     </ul>
                   </li> -->
                   <li class="<?php $aktif = ($_GET['page'] == 'contact') ? 'active' : '';
-                              echo $aktif; ?>"><a href="?page=contact">Contact</a></li>
+                              echo $aktif; ?>"><a href="?page=contact">Saran</a></li>
                   <?php
                   if (@$_SESSION["username"] == "") {
 
