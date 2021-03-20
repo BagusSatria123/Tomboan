@@ -42,30 +42,30 @@ session_start();
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'suguhan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Suguhan</a>
+                    <a href="?page=suguhan">Suguhan</a>
                     <ul class="dropdown arrow-top">
                       <?php
-                      $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
+                      $sql = mysqli_query($conn, "SELECT * FROM suguhan");
                       foreach ($sql as $value) {
                       ?>
-                        <li><a href="?page=fasilitas&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
+                        <li><a href="?page=suguhan&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
                       <?php
                       }
                       ?>
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'tumbuhan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Tumbuhan</a>
+                    <a href="?page=tumbuhan">Tumbuhan</a>
                     <ul class="dropdown arrow-top">
                       <?php
-                      $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
+                      $sql = mysqli_query($conn, "SELECT * FROM tumbuhan");
                       foreach ($sql as $value) {
                       ?>
-                        <li><a href="?page=fasilitas&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
+                        <li><a href="?page=tumbuhan&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
                       <?php
                       }
                       ?>
