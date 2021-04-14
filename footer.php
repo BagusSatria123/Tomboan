@@ -22,6 +22,9 @@
           <div class="col-md-6">
             <h3 class="footer-heading mb-4 text-white"></h3>
             <ul class="list-unstyled">
+            <h3 class="footer-heading mb-4 text-white"></h3>
+              <ul class="list-unstyled">
+              <div class="row">
             </ul>
           </div>
 
