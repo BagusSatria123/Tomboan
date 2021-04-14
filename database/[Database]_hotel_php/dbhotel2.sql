@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2021 at 04:14 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Mar 20, 2021 at 01:07 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 8.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -246,31 +246,6 @@ INSERT INTO `staff` (`id_staff`, `gambar`, `nama`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `suguhan`
---
-
-CREATE TABLE `suguhan` (
-  `id_suguhan` int(11) NOT NULL,
-  `jenis` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `gambar` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `suguhan`
---
-
-INSERT INTO `suguhan` (`id_suguhan`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Tahu Tempe dan Terong Goreng', 'Merupakan makanan Indonesia yaitu tahu, tempe, dan terong yang digoreng menggunakan minyak kelapa sawit', 'gorengan.jpg'),
-(2, 'Sambal Terong', 'Racikan sambal yang dicampur dengan terong', 'sambal_terong.jpg'),
-(3, 'Sate Vegan', 'Merupakan Sate yang bebas dari daging dengan saus kecap', 'sate.jpg'),
-(4, 'Gatot', 'Gatot singkong bertabur kelapa parut', 'gatot.jpg'),
-(6, 'Jamu Sidaguri', 'Merupakan racikan dari daun sidaguri yang bermanfaat', 'jamu.jpg'),
-(7, 'Dadar Jagung dan Kacang Goreng', 'Jagung dan Kacang di campur dengan tepung terigu yang digoreng', 'dadar_jagung.jpg');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tamu`
 --
 
@@ -324,31 +299,6 @@ INSERT INTO `transaksi` (`No_Faktur`, `No_Kamar`, `id_pelanggan`, `tgl_masuk`, `
 ('5cdfa5079e0dd', '002', '1', '2019-05-19', '2019-05-20', 1, '200000', 'afri yulianti', '082389132606', 'shellyasali@gmail.com', 'nnnn'),
 ('5ce373aa0109d', '003', '1', '2019-05-22', '2019-05-23', 1, '100000', 'afri yulianti', '082389132606', 'shellyasali@gmail.com', 'boking!!'),
 ('5ce507d042687', '003', '2', '2019-05-23', '2019-05-24', 1, '100000', 'Ridho Agustin', '08221702170', 'shellyasali@gmail.com', 'boking!!');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tumbuhan`
---
-
-CREATE TABLE `tumbuhan` (
-  `id_tumbuhan` int(11) NOT NULL,
-  `jenis` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `gambar` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tumbuhan`
---
-
-INSERT INTO `tumbuhan` (`id_tumbuhan`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Daun Sidaguri', 'Sidaguri adalah tumbuhan liar di tepi jalan, halaman berumput, hutan, ladang, dan tempat-tempat dengan sinar matahari cerah atau sedikit terlindung. \r\n\r\nSidaguri memiliki sifat khas manis dan mendinginkan. Kandungan utama tanaman adalah tanin, flavonoid, saponin, alkaloid dan glikosida. Di samping itu juga ditemui kalsium oksalat, fenol, steroid, efedrine dan asam amino.\r\n\r\nSidaguri memiliki Khasiat:\r\n\r\n1. Demam\r\n2. Diare\r\n3. Rematik\r\n4. Obat Luka\r\n5. Disentri', 'daun_sidaguri.jpg'),
-(2, 'Pecut Kuda', 'Pecut Kuda adalah salah satu tanaman liar yang hidup di Indonesia. Nama pecut kuda adalah nama lokal tanaman ini di Indonesia, sedangkan nama ilmiah dari tanaman ini adalah Stachytarpheta jamaicensis. Masyarakat Filipina menyebut tanaman pecut kuda dengan sebutan Kandikandilaan dan di Cina disebut dengan istilah Yulongbian\r\n\r\nPecut Kuda memiliki khasiat:\r\n1. Amandel\r\n2. Radang\r\n3. Batuk\r\n4. Rematik\r\n5. Infeksi Kemih\r\n6. Kanker', 'pecut_kuda.jpg'),
-(3, 'Kumis Kucing', 'Tanaman ini dinamakan kumis kucing karena ukuran benangsari lebih panjang dari mahkota bunga sehingga menyerupai bentuk kumis kucing. \r\n\r\nTanaman yang memiliki nama latin Orthosipon stamineus (BI.) Miq ini termasuk tumbuhan yang banyak dijumpai di deerah yang bersuhu sedang, termasuk di Indonesia.\r\n\r\nKumis Kucing berkhasiat :\r\n\r\n1. Sakit gigi\r\n2. Darah tinggi \r\n3. Baik untuk ginjal\r\n4. Rematik\r\n5. Asam urat', 'kumis_kucing.jpg'),
-(4, 'Daun Singkong', 'Singkong merupakan salah satu tanaman yang kaya manfaat. Mulai dari akar, batang, hingga daunnya bisa dimanfaatkan. Manfaat daun singkong untuk kesehatan tubuh juga cukup banyak.\r\n\r\nDaun Singkong berkhasiat:\r\n\r\n1. Rematik\r\n2. Demam\r\n3. Diare\r\n4. Membantu diet', 'daun_singkong.jpg'),
-(5, 'Pisang', 'Pisang adalah buah yang dikenal luas di Indonesia. Buah pisang bisa dinikmati dengan berbagai cara: dimakan langsung, digoreng, dikukus, atau diolah bersama bahan lain. Tapi pisang tidak hanya enak, manfaatnya banyak.\r\n\r\n1. Metabolisme\r\n2. Anemia\r\n3. Membantu diet\r\n4. Merawat kulit', 'pisang.jpg'),
-(6, 'Bunga Kopi', 'Beberapa khasiat dari bunga kopi ini adalah untuk menurunkan kadar gula atau orang sering menyebutnya dengan istilah diabetes. Selain itu, bunga kopi juga sangat baik untuk jantung Anda yang sehat. Dan yang lebih baik lagi bagi yang Anda yang pekerja keras, manfaatkanlah bunga kopi ini untuk mengatasi rasa lelah Anda.', 'bunga_kopi.jpg');
 
 -- --------------------------------------------------------
 
@@ -433,12 +383,6 @@ ALTER TABLE `staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- Indexes for table `suguhan`
---
-ALTER TABLE `suguhan`
-  ADD PRIMARY KEY (`id_suguhan`);
-
---
 -- Indexes for table `tamu`
 --
 ALTER TABLE `tamu`
@@ -450,12 +394,6 @@ ALTER TABLE `tamu`
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`No_Faktur`),
   ADD KEY `No_Kamar` (`No_Kamar`);
-
---
--- Indexes for table `tumbuhan`
---
-ALTER TABLE `tumbuhan`
-  ADD PRIMARY KEY (`id_tumbuhan`);
 
 --
 -- Indexes for table `user`
@@ -514,18 +452,6 @@ ALTER TABLE `slider`
 --
 ALTER TABLE `staff`
   MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `suguhan`
---
-ALTER TABLE `suguhan`
-  MODIFY `id_suguhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `tumbuhan`
---
-ALTER TABLE `tumbuhan`
-  MODIFY `id_tumbuhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

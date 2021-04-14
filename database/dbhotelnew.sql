@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2021 at 04:14 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Waktu pembuatan: 14 Apr 2021 pada 18.00
+-- Versi server: 10.1.38-MariaDB
+-- Versi PHP: 7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fasilitas`
+-- Struktur dari tabel `fasilitas`
 --
 
 CREATE TABLE `fasilitas` (
@@ -35,7 +36,7 @@ CREATE TABLE `fasilitas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `fasilitas`
+-- Dumping data untuk tabel `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`id_fasilitas`, `jenis`, `deskripsi`, `gambar`) VALUES
@@ -45,7 +46,7 @@ INSERT INTO `fasilitas` (`id_fasilitas`, `jenis`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galeri`
+-- Struktur dari tabel `galeri`
 --
 
 CREATE TABLE `galeri` (
@@ -56,7 +57,7 @@ CREATE TABLE `galeri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `galeri`
+-- Dumping data untuk tabel `galeri`
 --
 
 INSERT INTO `galeri` (`id_galeri`, `No_Kamar`, `gambar`, `kategori`) VALUES
@@ -64,12 +65,16 @@ INSERT INTO `galeri` (`id_galeri`, `No_Kamar`, `gambar`, `kategori`) VALUES
 (2, 2, 'headetomboan2.JPG', ''),
 (3, 3, 'headetomboan5.JPG', ''),
 (4, 4, 'headetomboan4.JPG', ''),
-(5, 5, 'headetomboan6.JPG', '');
+(5, 5, 'headetomboan6.JPG', ''),
+(6, 6, 'tomboangal11.JPG', ''),
+(7, 7, 'tomboangal1.JPEG', ''),
+(8, 8, 'tomboangal2.JPG', ''),
+(9, 9, 'tomboangal3.JPG', '');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `galeri2`
+-- Struktur dari tabel `galeri2`
 --
 
 CREATE TABLE `galeri2` (
@@ -79,7 +84,7 @@ CREATE TABLE `galeri2` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `galeri2`
+-- Dumping data untuk tabel `galeri2`
 --
 
 INSERT INTO `galeri2` (`id_galeri2`, `nama`, `gambar`) VALUES
@@ -95,7 +100,7 @@ INSERT INTO `galeri2` (`id_galeri2`, `nama`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kamar`
+-- Struktur dari tabel `kamar`
 --
 
 CREATE TABLE `kamar` (
@@ -108,7 +113,7 @@ CREATE TABLE `kamar` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kamar`
+-- Dumping data untuk tabel `kamar`
 --
 
 INSERT INTO `kamar` (`No_Kamar`, `id_galeri`, `Jenis`, `Type`, `Tarif`, `deskripsi`) VALUES
@@ -120,7 +125,7 @@ INSERT INTO `kamar` (`No_Kamar`, `id_galeri`, `Jenis`, `Type`, `Tarif`, `deskrip
 -- --------------------------------------------------------
 
 --
--- Table structure for table `konfirmasi`
+-- Struktur dari tabel `konfirmasi`
 --
 
 CREATE TABLE `konfirmasi` (
@@ -133,7 +138,7 @@ CREATE TABLE `konfirmasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `konfirmasi`
+-- Dumping data untuk tabel `konfirmasi`
 --
 
 INSERT INTO `konfirmasi` (`id_konfirmasi`, `id_pelanggan`, `jumlah_transfer`, `bank`, `gambar`, `status`) VALUES
@@ -145,7 +150,7 @@ INSERT INTO `konfirmasi` (`id_konfirmasi`, `id_pelanggan`, `jumlah_transfer`, `b
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pelanggan`
+-- Struktur dari tabel `pelanggan`
 --
 
 CREATE TABLE `pelanggan` (
@@ -160,7 +165,7 @@ CREATE TABLE `pelanggan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `pelanggan`
+-- Dumping data untuk tabel `pelanggan`
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `username`, `password`, `no_hp`, `jk`, `alamat`, `email`) VALUES
@@ -170,7 +175,7 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `username`, `password`, `no_hp`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `saran`
+-- Struktur dari tabel `saran`
 --
 
 CREATE TABLE `saran` (
@@ -183,7 +188,7 @@ CREATE TABLE `saran` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `saran`
+-- Dumping data untuk tabel `saran`
 --
 
 INSERT INTO `saran` (`id_saran`, `gambar`, `nama`, `email`, `phone`, `pesan`) VALUES
@@ -199,7 +204,7 @@ INSERT INTO `saran` (`id_saran`, `gambar`, `nama`, `email`, `phone`, `pesan`) VA
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slider`
+-- Struktur dari tabel `slider`
 --
 
 CREATE TABLE `slider` (
@@ -210,7 +215,7 @@ CREATE TABLE `slider` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slider`
+-- Dumping data untuk tabel `slider`
 --
 
 INSERT INTO `slider` (`id_slider`, `gambar`, `deskripsi1`, `deskripsi2`) VALUES
@@ -221,7 +226,7 @@ INSERT INTO `slider` (`id_slider`, `gambar`, `deskripsi1`, `deskripsi2`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- Struktur dari tabel `staff`
 --
 
 CREATE TABLE `staff` (
@@ -232,7 +237,7 @@ CREATE TABLE `staff` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `staff`
+-- Dumping data untuk tabel `staff`
 --
 
 INSERT INTO `staff` (`id_staff`, `gambar`, `nama`, `deskripsi`) VALUES
@@ -246,7 +251,7 @@ INSERT INTO `staff` (`id_staff`, `gambar`, `nama`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `suguhan`
+-- Struktur dari tabel `suguhan`
 --
 
 CREATE TABLE `suguhan` (
@@ -257,7 +262,7 @@ CREATE TABLE `suguhan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `suguhan`
+-- Dumping data untuk tabel `suguhan`
 --
 
 INSERT INTO `suguhan` (`id_suguhan`, `jenis`, `deskripsi`, `gambar`) VALUES
@@ -271,7 +276,7 @@ INSERT INTO `suguhan` (`id_suguhan`, `jenis`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tamu`
+-- Struktur dari tabel `tamu`
 --
 
 CREATE TABLE `tamu` (
@@ -284,7 +289,7 @@ CREATE TABLE `tamu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tamu`
+-- Dumping data untuk tabel `tamu`
 --
 
 INSERT INTO `tamu` (`id_pelanggan`, `Nama`, `Alamat`, `Asal`, `NoTlp`, `jk`) VALUES
@@ -297,7 +302,7 @@ INSERT INTO `tamu` (`id_pelanggan`, `Nama`, `Alamat`, `Asal`, `NoTlp`, `jk`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transaksi`
+-- Struktur dari tabel `transaksi`
 --
 
 CREATE TABLE `transaksi` (
@@ -315,7 +320,7 @@ CREATE TABLE `transaksi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `transaksi`
+-- Dumping data untuk tabel `transaksi`
 --
 
 INSERT INTO `transaksi` (`No_Faktur`, `No_Kamar`, `id_pelanggan`, `tgl_masuk`, `tgl_keluar`, `lama_menginap`, `Tarif`, `Nama`, `Telpon`, `Email`, `pesan`) VALUES
@@ -328,7 +333,7 @@ INSERT INTO `transaksi` (`No_Faktur`, `No_Kamar`, `id_pelanggan`, `tgl_masuk`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tumbuhan`
+-- Struktur dari tabel `tumbuhan`
 --
 
 CREATE TABLE `tumbuhan` (
@@ -339,7 +344,7 @@ CREATE TABLE `tumbuhan` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `tumbuhan`
+-- Dumping data untuk tabel `tumbuhan`
 --
 
 INSERT INTO `tumbuhan` (`id_tumbuhan`, `jenis`, `deskripsi`, `gambar`) VALUES
@@ -353,7 +358,7 @@ INSERT INTO `tumbuhan` (`id_tumbuhan`, `jenis`, `deskripsi`, `gambar`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -365,7 +370,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Dumping data untuk tabel `user`
 --
 
 INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
@@ -376,26 +381,26 @@ INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
 --
 
 --
--- Indexes for table `fasilitas`
+-- Indeks untuk tabel `fasilitas`
 --
 ALTER TABLE `fasilitas`
   ADD PRIMARY KEY (`id_fasilitas`);
 
 --
--- Indexes for table `galeri`
+-- Indeks untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
   ADD PRIMARY KEY (`id_galeri`),
   ADD KEY `No_Kamar` (`No_Kamar`);
 
 --
--- Indexes for table `galeri2`
+-- Indeks untuk tabel `galeri2`
 --
 ALTER TABLE `galeri2`
   ADD PRIMARY KEY (`id_galeri2`);
 
 --
--- Indexes for table `kamar`
+-- Indeks untuk tabel `kamar`
 --
 ALTER TABLE `kamar`
   ADD PRIMARY KEY (`No_Kamar`),
@@ -403,126 +408,126 @@ ALTER TABLE `kamar`
   ADD KEY `id_galeri_2` (`id_galeri`);
 
 --
--- Indexes for table `konfirmasi`
+-- Indeks untuk tabel `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
   ADD PRIMARY KEY (`id_konfirmasi`);
 
 --
--- Indexes for table `pelanggan`
+-- Indeks untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   ADD PRIMARY KEY (`id_pelanggan`);
 
 --
--- Indexes for table `saran`
+-- Indeks untuk tabel `saran`
 --
 ALTER TABLE `saran`
   ADD PRIMARY KEY (`id_saran`);
 
 --
--- Indexes for table `slider`
+-- Indeks untuk tabel `slider`
 --
 ALTER TABLE `slider`
   ADD PRIMARY KEY (`id_slider`);
 
 --
--- Indexes for table `staff`
+-- Indeks untuk tabel `staff`
 --
 ALTER TABLE `staff`
   ADD PRIMARY KEY (`id_staff`);
 
 --
--- Indexes for table `suguhan`
+-- Indeks untuk tabel `suguhan`
 --
 ALTER TABLE `suguhan`
   ADD PRIMARY KEY (`id_suguhan`);
 
 --
--- Indexes for table `tamu`
+-- Indeks untuk tabel `tamu`
 --
 ALTER TABLE `tamu`
   ADD PRIMARY KEY (`id_pelanggan`);
 
 --
--- Indexes for table `transaksi`
+-- Indeks untuk tabel `transaksi`
 --
 ALTER TABLE `transaksi`
   ADD PRIMARY KEY (`No_Faktur`),
   ADD KEY `No_Kamar` (`No_Kamar`);
 
 --
--- Indexes for table `tumbuhan`
+-- Indeks untuk tabel `tumbuhan`
 --
 ALTER TABLE `tumbuhan`
   ADD PRIMARY KEY (`id_tumbuhan`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `fasilitas`
+-- AUTO_INCREMENT untuk tabel `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `galeri`
+-- AUTO_INCREMENT untuk tabel `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `galeri2`
+-- AUTO_INCREMENT untuk tabel `galeri2`
 --
 ALTER TABLE `galeri2`
   MODIFY `id_galeri2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `konfirmasi`
+-- AUTO_INCREMENT untuk tabel `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
   MODIFY `id_konfirmasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
--- AUTO_INCREMENT for table `pelanggan`
+-- AUTO_INCREMENT untuk tabel `pelanggan`
 --
 ALTER TABLE `pelanggan`
   MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `saran`
+-- AUTO_INCREMENT untuk tabel `saran`
 --
 ALTER TABLE `saran`
   MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
--- AUTO_INCREMENT for table `slider`
+-- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
   MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `staff`
+-- AUTO_INCREMENT untuk tabel `staff`
 --
 ALTER TABLE `staff`
   MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
--- AUTO_INCREMENT for table `suguhan`
+-- AUTO_INCREMENT untuk tabel `suguhan`
 --
 ALTER TABLE `suguhan`
   MODIFY `id_suguhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
--- AUTO_INCREMENT for table `tumbuhan`
+-- AUTO_INCREMENT untuk tabel `tumbuhan`
 --
 ALTER TABLE `tumbuhan`
   MODIFY `id_tumbuhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;

@@ -3,7 +3,7 @@
 		<div class="row align-items-center justify-content-center">
 			<div class="col-md-7 text-center" data-aos="fade">
 				<span class="caption mb-3">Tomboan Ngawonggo</span>
-				<h1 class="mb-4">Tentang Kami</h1>
+				<h1 class="mb-4">WORO - WORO</h1>
 			</div>
 		</div>
 	</div>
@@ -12,19 +12,26 @@
 	<div class="container">
 		<div class="row align-items-center">
 			<div class="col-md-6 mb-5 mb-md-0">
+
 				<div class="img-border">
-					<img src="images/tomboangal3.jpg" alt="" class="img-fluid">
+					<img src="images/headetomboan2.JPG" alt="" class="img-fluid">
 				</div>
-				<img src="images/as.jpg" alt="Image" class="img-fluid image-absolute">
+				<img src="images/headetomboan3.jpg" alt="Image" class="img-fluid image-absolute">
+
 			</div>
 			<div class="col-md-5 ml-auto">
 				<div class="section-heading text-left">
-					<h3 class="mb-5">Tomboan Ngawonggo</h3>
+					<h2 class="mb-5">Pemahaman</h2>
 				</div>
-				<p class="mb-5">Tomboan Ngawonggo berada di kawasan Situs Petirtaan Ngawonggo, Dusun Nanasan, Desa Ngawonggo, Kecamatan Tajinan, Kabupaten Malang.
-					Hadir dengan konsep tradisional dimana suasana yang masih asri seperti berada di pedesaan, pada pintu utama pengunjung wisata akan disajikan dengan sebuah gubuk yang sering disebut dengan pawon (bahasa jawa)/ dapur untuk menyajikan berbagai jenis wedang (minuman) sebelum menuju ke lokasi Patirtaan.
-					Berbagai jenis minuman tradisional yang khusus disajikan untuk wisatawan yang hadir, diantaranya ada minuman khas yaitu wedang ngawonggo, wedang rosela, tomboan ijo, tomboan abang yang sengaja di racik dan mempunyai khasiat di dalamnya.
-
+				<p class="mb-4">Kami bukan warung..<br>Semua orang harus sabar dan pengertian. Diharap Jangan Terburu-buru.Harus santai nggih.<br>
+					Semisal Terburu-buru Kami Sarankan Tidak Mampir terlebih dahulu, Bisa mencari waktu luang untuk menikmati ruang yang kami sediakan.<br>
+					Dan jangan lupa wajib <b>RESERVASI.</b><br><br>
+					<b>WAJIB RESERVASI MAKSIMAL H-1.</b>
+				<ul>
+					<li>BUKAN WARUNG ATAU CAFE</li>
+					<li>Melayani mulai pukul 09.00 sampai 14.30</li>
+					<li>Kamis LIBUR</li>
+				</ul>
 				</p>
 			</div>
 		</div>
@@ -66,7 +73,8 @@ if (!isset($_GET['id'])) {
 	</div> -->
 <?php
 } else {
-?> <div class="site-section">
+?>
+	<div class="site-section">
 		<div class="container">
 			<div class="row align-items-center">
 				<div class="col-md-6 mb-5 mb-md-0">
@@ -79,12 +87,11 @@ if (!isset($_GET['id'])) {
 				</div>
 				<div class="col-md-5 ml-auto">
 					<div class="section-heading text-left">
-						<h2 class="mb-5">Tomboan Ngawonggo</h2>
+						<h2 class="mb-5">Deskripsi</h2>
 					</div>
-					<p class="mb-4">Tomboan Ngawonggo berada di kawasan Situs Petirtaan Ngawonggo, Dusun Nanasan, Desa Ngawonggo, Kecamatan Tajinan, Kabupaten Malang.
-						Hadir dengan konsep tradisional dimana suasana yang masih asri seperti berada di pedesaan, pada pintu utama pengunjung wisata akan disajikan dengan sebuah gubuk yang sering disebut dengan pawon (bahasa jawa)/ dapur untuk menyajikan berbagai jenis wedang (minuman) sebelum menuju ke lokasi Patirtaan.
-						Berbagai jenis minuman tradisional yang khusus disajikan untuk wisatawan yang hadir, diantaranya ada minuman khas yaitu wedang ngawonggo, wedang rosela, tomboan ijo, tomboan abang yang sengaja di racik dan mempunyai khasiat di dalamnya.
-					</p>
+					<p class="mb-4">Distrik Bisnis dapat dicapai dengan berjalan kaki dan hanya 20 menit dari Bandara Minangkabau, hotel Mercure Padang dengan 146 kamar dilengkapi 1 Ballroom dan 5 ruang rapat. Tempat yang ideal untuk rapat bisnis, seminar, peluncuran produk, pernikahan, dan acara sosial lainnya.
+						Hotel Mercure Padang berlokasi strategis tepat di pusat kota Padang. Nikmati berbelanja di pusat perbelanjaan dekat hotel atau manfaatkan Pusat Konvensi Padang. Baik berkunjung untuk bisnis maupun berlibur, hotel Mercure ini menawarkan tempat menginap ideal untuk menjelajahi berbagai tengara kota yang penting dan beragam tempat wisata, serta untuk berbisnis.
+						Padang adalah salah satu pusat bisnis di Indonesia. Terletak dekat pantai dan pegunungan, Mercure Padang berada dekat dengan banyak daya tarik ekowisata, memastikan keseimbangan sempurna antara aktivitas bisnis dan rekreasi Anda.</p>
 				</div>
 			</div>
 		</div>

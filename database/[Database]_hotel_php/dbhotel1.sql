@@ -1,21 +1,20 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
+-- version 4.2.11
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2021 at 04:14 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: May 27, 2019 at 11:04 AM
+-- Server version: 5.6.21
+-- PHP Version: 5.5.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `dbhotel`
@@ -27,20 +26,23 @@ SET time_zone = "+00:00";
 -- Table structure for table `fasilitas`
 --
 
-CREATE TABLE `fasilitas` (
-  `id_fasilitas` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `fasilitas` (
+`id_fasilitas` int(11) NOT NULL,
   `jenis` varchar(50) NOT NULL,
   `deskripsi` text NOT NULL,
   `gambar` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `fasilitas`
 --
 
 INSERT INTO `fasilitas` (`id_fasilitas`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Kolam Renang', 'Bar kolam renang dengan penataan unik untuk melewatkan hari dengan secangkir teh atau kopi atau segelas koktail. Memiliki pemandangan laut dan kolam renang yang fantasitis', 'gambartatatertib.jpg'),
-(2, 'Restoran', 'Dengan pemandangan kolam renang dan laut yang indah, Atlantis menyajikan sarapan, makan siang, makan malam dan cemilan lezat menggunakan bahan paling segar untuk pengalaman bersantap yang paling orisinil dan menyenangkan.', 'bar.jpg');
+(1, 'Kolam Renang', 'Bar kolam renang dengan penataan unik untuk melewatkan hari dengan secangkir teh atau kopi atau segelas koktail. Memiliki pemandangan laut dan kolam renang yang fantasitis', 'hotel-di-padang2.jpg'),
+(2, 'Restoran', 'Dengan pemandangan kolam renang dan laut yang indah, Atlantis menyajikan sarapan, makan siang, makan malam dan cemilan lezat menggunakan bahan paling segar untuk pengalaman bersantap yang paling orisinil dan menyenangkan.', 'bar.jpg'),
+(3, 'Gym', 'Bagi anda yang suka berolahraga, Kami manajemen Hotel Mercure juga Menyediakan fasilitas olahraga dan gym, sehingga client juga bisa berolahraga di hotel tanpa harus capek pergi keluar sekedar mencari tempat GYM, dan juga berolahraga di GYM hotel mercure juga sangat menyenangkan karena sambil berolahraga juga bisa sambil menikmati sunset di Penghujung senja.', 'gym.jpg'),
+(4, 'Ruang Temu Bisnis', 'Menyediakan Ruang temu yang sangat mewah, dan bisa di desain juga, ruang ini berguna sebagai tampat mengadakan acara rapat bisnis yang di lakukan oleh pengusaha - pengusaha besar, dan sebagai acara lainnya juga. sehingga tidak rugi deh bagi para pebisnis atau pengusaha melakukan rapat penting mereka di Hotel Mercure.', 'ruang temu.jpg'),
+(5, 'Spa', 'Hotel Mercure Menyediakan fasilitas SPA bagi para perempuan yang ingin tampil lebih cantik dan memanjakan diri mereka, selain itu petugas SPA juga sangat ramah serta produk yang pakai di SPA Hotel Mercuredi bawah perlindungan dokter kecantikan, jadi di jamin aman untuk kulit client.', 'spa.jpg');
 
 -- --------------------------------------------------------
 
@@ -48,23 +50,22 @@ INSERT INTO `fasilitas` (`id_fasilitas`, `jenis`, `deskripsi`, `gambar`) VALUES
 -- Table structure for table `galeri`
 --
 
-CREATE TABLE `galeri` (
-  `id_galeri` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `galeri` (
+`id_galeri` int(11) NOT NULL,
   `No_Kamar` int(50) NOT NULL,
   `gambar` varchar(50) NOT NULL,
   `kategori` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galeri`
 --
 
 INSERT INTO `galeri` (`id_galeri`, `No_Kamar`, `gambar`, `kategori`) VALUES
-(1, 1, 'headetomboan3.JPG', ''),
-(2, 2, 'headetomboan2.JPG', ''),
-(3, 3, 'headetomboan5.JPG', ''),
-(4, 4, 'headetomboan4.JPG', ''),
-(5, 5, 'headetomboan6.JPG', '');
+(1, 1, 'Capture1.JPG', ''),
+(2, 2, 'Capture2.JPG', ''),
+(3, 3, 'Capture3.JPG', ''),
+(4, 4, 'Capture4.JPG', '');
 
 -- --------------------------------------------------------
 
@@ -72,11 +73,11 @@ INSERT INTO `galeri` (`id_galeri`, `No_Kamar`, `gambar`, `kategori`) VALUES
 -- Table structure for table `galeri2`
 --
 
-CREATE TABLE `galeri2` (
-  `id_galeri2` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `galeri2` (
+`id_galeri2` int(11) NOT NULL,
   `nama` varchar(35) NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `galeri2`
@@ -98,7 +99,7 @@ INSERT INTO `galeri2` (`id_galeri2`, `nama`, `gambar`) VALUES
 -- Table structure for table `kamar`
 --
 
-CREATE TABLE `kamar` (
+CREATE TABLE IF NOT EXISTS `kamar` (
   `No_Kamar` char(15) NOT NULL,
   `id_galeri` int(50) NOT NULL,
   `Jenis` varchar(50) DEFAULT NULL,
@@ -123,14 +124,14 @@ INSERT INTO `kamar` (`No_Kamar`, `id_galeri`, `Jenis`, `Type`, `Tarif`, `deskrip
 -- Table structure for table `konfirmasi`
 --
 
-CREATE TABLE `konfirmasi` (
-  `id_konfirmasi` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `konfirmasi` (
+`id_konfirmasi` int(11) NOT NULL,
   `id_pelanggan` int(50) NOT NULL,
   `jumlah_transfer` int(11) NOT NULL,
   `bank` varchar(50) NOT NULL,
   `gambar` text NOT NULL,
   `status` varchar(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `konfirmasi`
@@ -148,8 +149,8 @@ INSERT INTO `konfirmasi` (`id_konfirmasi`, `id_pelanggan`, `jumlah_transfer`, `b
 -- Table structure for table `pelanggan`
 --
 
-CREATE TABLE `pelanggan` (
-  `id_pelanggan` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `pelanggan` (
+`id_pelanggan` int(11) NOT NULL,
   `nama` varchar(50) NOT NULL,
   `username` varchar(35) NOT NULL,
   `password` varchar(35) NOT NULL,
@@ -157,7 +158,7 @@ CREATE TABLE `pelanggan` (
   `jk` varchar(11) NOT NULL,
   `alamat` text NOT NULL,
   `email` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `pelanggan`
@@ -173,14 +174,14 @@ INSERT INTO `pelanggan` (`id_pelanggan`, `nama`, `username`, `password`, `no_hp`
 -- Table structure for table `saran`
 --
 
-CREATE TABLE `saran` (
-  `id_saran` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `saran` (
+`id_saran` int(11) NOT NULL,
   `gambar` text NOT NULL,
   `nama` varchar(35) NOT NULL,
   `email` varchar(25) NOT NULL,
   `phone` varchar(15) NOT NULL,
   `pesan` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `saran`
@@ -202,12 +203,12 @@ INSERT INTO `saran` (`id_saran`, `gambar`, `nama`, `email`, `phone`, `pesan`) VA
 -- Table structure for table `slider`
 --
 
-CREATE TABLE `slider` (
-  `id_slider` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `slider` (
+`id_slider` int(11) NOT NULL,
   `gambar` varchar(50) NOT NULL,
   `deskripsi1` varchar(50) NOT NULL,
   `deskripsi2` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `slider`
@@ -224,12 +225,12 @@ INSERT INTO `slider` (`id_slider`, `gambar`, `deskripsi1`, `deskripsi2`) VALUES
 -- Table structure for table `staff`
 --
 
-CREATE TABLE `staff` (
-  `id_staff` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `staff` (
+`id_staff` int(11) NOT NULL,
   `gambar` text NOT NULL,
   `nama` varchar(25) NOT NULL,
   `deskripsi` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `staff`
@@ -246,35 +247,10 @@ INSERT INTO `staff` (`id_staff`, `gambar`, `nama`, `deskripsi`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `suguhan`
---
-
-CREATE TABLE `suguhan` (
-  `id_suguhan` int(11) NOT NULL,
-  `jenis` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `gambar` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `suguhan`
---
-
-INSERT INTO `suguhan` (`id_suguhan`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Tahu Tempe dan Terong Goreng', 'Merupakan makanan Indonesia yaitu tahu, tempe, dan terong yang digoreng menggunakan minyak kelapa sawit', 'gorengan.jpg'),
-(2, 'Sambal Terong', 'Racikan sambal yang dicampur dengan terong', 'sambal_terong.jpg'),
-(3, 'Sate Vegan', 'Merupakan Sate yang bebas dari daging dengan saus kecap', 'sate.jpg'),
-(4, 'Gatot', 'Gatot singkong bertabur kelapa parut', 'gatot.jpg'),
-(6, 'Jamu Sidaguri', 'Merupakan racikan dari daun sidaguri yang bermanfaat', 'jamu.jpg'),
-(7, 'Dadar Jagung dan Kacang Goreng', 'Jagung dan Kacang di campur dengan tepung terigu yang digoreng', 'dadar_jagung.jpg');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tamu`
 --
 
-CREATE TABLE `tamu` (
+CREATE TABLE IF NOT EXISTS `tamu` (
   `id_pelanggan` char(15) NOT NULL,
   `Nama` varchar(100) DEFAULT NULL,
   `Alamat` char(15) DEFAULT NULL,
@@ -300,7 +276,7 @@ INSERT INTO `tamu` (`id_pelanggan`, `Nama`, `Alamat`, `Asal`, `NoTlp`, `jk`) VAL
 -- Table structure for table `transaksi`
 --
 
-CREATE TABLE `transaksi` (
+CREATE TABLE IF NOT EXISTS `transaksi` (
   `No_Faktur` varchar(50) NOT NULL,
   `No_Kamar` char(15) NOT NULL,
   `id_pelanggan` varchar(11) NOT NULL,
@@ -328,35 +304,10 @@ INSERT INTO `transaksi` (`No_Faktur`, `No_Kamar`, `id_pelanggan`, `tgl_masuk`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tumbuhan`
---
-
-CREATE TABLE `tumbuhan` (
-  `id_tumbuhan` int(11) NOT NULL,
-  `jenis` varchar(50) NOT NULL,
-  `deskripsi` text NOT NULL,
-  `gambar` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `tumbuhan`
---
-
-INSERT INTO `tumbuhan` (`id_tumbuhan`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Daun Sidaguri', 'Sidaguri adalah tumbuhan liar di tepi jalan, halaman berumput, hutan, ladang, dan tempat-tempat dengan sinar matahari cerah atau sedikit terlindung. \r\n\r\nSidaguri memiliki sifat khas manis dan mendinginkan. Kandungan utama tanaman adalah tanin, flavonoid, saponin, alkaloid dan glikosida. Di samping itu juga ditemui kalsium oksalat, fenol, steroid, efedrine dan asam amino.\r\n\r\nSidaguri memiliki Khasiat:\r\n\r\n1. Demam\r\n2. Diare\r\n3. Rematik\r\n4. Obat Luka\r\n5. Disentri', 'daun_sidaguri.jpg'),
-(2, 'Pecut Kuda', 'Pecut Kuda adalah salah satu tanaman liar yang hidup di Indonesia. Nama pecut kuda adalah nama lokal tanaman ini di Indonesia, sedangkan nama ilmiah dari tanaman ini adalah Stachytarpheta jamaicensis. Masyarakat Filipina menyebut tanaman pecut kuda dengan sebutan Kandikandilaan dan di Cina disebut dengan istilah Yulongbian\r\n\r\nPecut Kuda memiliki khasiat:\r\n1. Amandel\r\n2. Radang\r\n3. Batuk\r\n4. Rematik\r\n5. Infeksi Kemih\r\n6. Kanker', 'pecut_kuda.jpg'),
-(3, 'Kumis Kucing', 'Tanaman ini dinamakan kumis kucing karena ukuran benangsari lebih panjang dari mahkota bunga sehingga menyerupai bentuk kumis kucing. \r\n\r\nTanaman yang memiliki nama latin Orthosipon stamineus (BI.) Miq ini termasuk tumbuhan yang banyak dijumpai di deerah yang bersuhu sedang, termasuk di Indonesia.\r\n\r\nKumis Kucing berkhasiat :\r\n\r\n1. Sakit gigi\r\n2. Darah tinggi \r\n3. Baik untuk ginjal\r\n4. Rematik\r\n5. Asam urat', 'kumis_kucing.jpg'),
-(4, 'Daun Singkong', 'Singkong merupakan salah satu tanaman yang kaya manfaat. Mulai dari akar, batang, hingga daunnya bisa dimanfaatkan. Manfaat daun singkong untuk kesehatan tubuh juga cukup banyak.\r\n\r\nDaun Singkong berkhasiat:\r\n\r\n1. Rematik\r\n2. Demam\r\n3. Diare\r\n4. Membantu diet', 'daun_singkong.jpg'),
-(5, 'Pisang', 'Pisang adalah buah yang dikenal luas di Indonesia. Buah pisang bisa dinikmati dengan berbagai cara: dimakan langsung, digoreng, dikukus, atau diolah bersama bahan lain. Tapi pisang tidak hanya enak, manfaatnya banyak.\r\n\r\n1. Metabolisme\r\n2. Anemia\r\n3. Membantu diet\r\n4. Merawat kulit', 'pisang.jpg'),
-(6, 'Bunga Kopi', 'Beberapa khasiat dari bunga kopi ini adalah untuk menurunkan kadar gula atau orang sering menyebutnya dengan istilah diabetes. Selain itu, bunga kopi juga sangat baik untuk jantung Anda yang sehat. Dan yang lebih baik lagi bagi yang Anda yang pekerja keras, manfaatkanlah bunga kopi ini untuk mengatasi rasa lelah Anda.', 'bunga_kopi.jpg');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `user`
 --
 
-CREATE TABLE `user` (
+CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) NOT NULL,
   `nama` varchar(30) NOT NULL,
   `username` varchar(30) NOT NULL,
@@ -379,89 +330,73 @@ INSERT INTO `user` (`id`, `nama`, `username`, `password`, `level`) VALUES
 -- Indexes for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  ADD PRIMARY KEY (`id_fasilitas`);
+ ADD PRIMARY KEY (`id_fasilitas`);
 
 --
 -- Indexes for table `galeri`
 --
 ALTER TABLE `galeri`
-  ADD PRIMARY KEY (`id_galeri`),
-  ADD KEY `No_Kamar` (`No_Kamar`);
+ ADD PRIMARY KEY (`id_galeri`), ADD KEY `No_Kamar` (`No_Kamar`);
 
 --
 -- Indexes for table `galeri2`
 --
 ALTER TABLE `galeri2`
-  ADD PRIMARY KEY (`id_galeri2`);
+ ADD PRIMARY KEY (`id_galeri2`);
 
 --
 -- Indexes for table `kamar`
 --
 ALTER TABLE `kamar`
-  ADD PRIMARY KEY (`No_Kamar`),
-  ADD KEY `id_galeri` (`id_galeri`),
-  ADD KEY `id_galeri_2` (`id_galeri`);
+ ADD PRIMARY KEY (`No_Kamar`), ADD KEY `id_galeri` (`id_galeri`), ADD KEY `id_galeri_2` (`id_galeri`);
 
 --
 -- Indexes for table `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
-  ADD PRIMARY KEY (`id_konfirmasi`);
+ ADD PRIMARY KEY (`id_konfirmasi`);
 
 --
 -- Indexes for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  ADD PRIMARY KEY (`id_pelanggan`);
+ ADD PRIMARY KEY (`id_pelanggan`);
 
 --
 -- Indexes for table `saran`
 --
 ALTER TABLE `saran`
-  ADD PRIMARY KEY (`id_saran`);
+ ADD PRIMARY KEY (`id_saran`);
 
 --
 -- Indexes for table `slider`
 --
 ALTER TABLE `slider`
-  ADD PRIMARY KEY (`id_slider`);
+ ADD PRIMARY KEY (`id_slider`);
 
 --
 -- Indexes for table `staff`
 --
 ALTER TABLE `staff`
-  ADD PRIMARY KEY (`id_staff`);
-
---
--- Indexes for table `suguhan`
---
-ALTER TABLE `suguhan`
-  ADD PRIMARY KEY (`id_suguhan`);
+ ADD PRIMARY KEY (`id_staff`);
 
 --
 -- Indexes for table `tamu`
 --
 ALTER TABLE `tamu`
-  ADD PRIMARY KEY (`id_pelanggan`);
+ ADD PRIMARY KEY (`id_pelanggan`);
 
 --
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`No_Faktur`),
-  ADD KEY `No_Kamar` (`No_Kamar`);
-
---
--- Indexes for table `tumbuhan`
---
-ALTER TABLE `tumbuhan`
-  ADD PRIMARY KEY (`id_tumbuhan`);
+ ADD PRIMARY KEY (`No_Faktur`), ADD KEY `No_Kamar` (`No_Kamar`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -471,63 +406,42 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `fasilitas`
 --
 ALTER TABLE `fasilitas`
-  MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+MODIFY `id_fasilitas` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
-
+MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `galeri2`
 --
 ALTER TABLE `galeri2`
-  MODIFY `id_galeri2` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
+MODIFY `id_galeri2` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
-  MODIFY `id_konfirmasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
+MODIFY `id_konfirmasi` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
+MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `saran`
 --
 ALTER TABLE `saran`
-  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
+MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
+MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
---
--- AUTO_INCREMENT for table `suguhan`
---
-ALTER TABLE `suguhan`
-  MODIFY `id_suguhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-
---
--- AUTO_INCREMENT for table `tumbuhan`
---
-ALTER TABLE `tumbuhan`
-  MODIFY `id_tumbuhan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-COMMIT;
-
+MODIFY `id_staff` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

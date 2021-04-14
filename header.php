@@ -24,12 +24,12 @@ session_start();
                   <li class="<?php $aktif = ($_GET['page'] == 'about') ? 'active' : '';
                               echo $aktif; ?>"><a href="?page=about">Tentang</a></li>
 
-                  <li class="<?php $aktif = ($_GET['page'] == 'about') ? 'active' : '';
-                              echo $aktif; ?>"><a href="?page=about">Woro-Woro</a></li>
+                  <li class="<?php $aktif = ($_GET['page'] == 'woro') ? 'active' : '';
+                              echo $aktif; ?>"><a href="?page=woro">Woro-Woro</a></li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'aturan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Aturan</a>
+                    <a href="?page=aturan">Aturan</a>
                     <ul class="dropdown arrow-top">
                       <?php
                       $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
@@ -42,40 +42,40 @@ session_start();
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'suguhan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Suguhan</a>
+                    <a href="?page=suguhan">Suguhan</a>
                     <ul class="dropdown arrow-top">
                       <?php
-                      $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
+                      $sql = mysqli_query($conn, "SELECT * FROM suguhan");
                       foreach ($sql as $value) {
                       ?>
-                        <li><a href="?page=fasilitas&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
+                        <li><a href="?page=suguhan&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
                       <?php
                       }
                       ?>
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'fasilitas') ? 'active' : '';
+                  <li class="has-children <?php $aktif = ($_GET['page'] == 'tumbuhan') ? 'active' : '';
                                           echo $aktif; ?>">
-                    <a href="?page=fasilitas">Tumbuhan</a>
+                    <a href="?page=tumbuhan">Tumbuhan</a>
                     <ul class="dropdown arrow-top">
                       <?php
-                      $sql = mysqli_query($conn, "SELECT * FROM fasilitas");
+                      $sql = mysqli_query($conn, "SELECT * FROM tumbuhan");
                       foreach ($sql as $value) {
                       ?>
-                        <li><a href="?page=fasilitas&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
+                        <li><a href="?page=tumbuhan&jenis=<?= $value['jenis']; ?>"><?= $value['jenis']; ?></a></li>
                       <?php
                       }
                       ?>
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'kamar') ? 'active' : '';
-                                          echo $aktif; ?>">
+                  <li class=" <?php $aktif = ($_GET['page'] == 'kamar') ? 'active' : '';
+                              echo $aktif; ?>">
                     <a href="?page=kamar">Galeri</a>
-                    <ul class="dropdown arrow-top">
+                    <!-- <ul class="dropdown arrow-top">
                       <?php
                       $sql = mysqli_query($conn, "SELECT kamar.Jenis FROM kamar");
                       foreach ($sql as $value) {
@@ -84,7 +84,7 @@ session_start();
                       <?php
                       }
                       ?>
-                    </ul>
+                    </ul> -->
                   </li>
                   <!-- <li class="has-children <?php $aktif = ($_GET['page'] == 'reservasi') ? 'active' : '';
                                                 echo $aktif; ?>">
@@ -109,7 +109,7 @@ session_start();
                     </ul>
                   </li> -->
                   <li class="<?php $aktif = ($_GET['page'] == 'contact') ? 'active' : '';
-                              echo $aktif; ?>"><a href="?page=contact">Contact</a></li>
+                              echo $aktif; ?>"><a href="?page=contact">Saran</a></li>
                   <?php
                   if (@$_SESSION["username"] == "") {
 
