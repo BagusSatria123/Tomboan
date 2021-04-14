@@ -20,20 +20,11 @@
       <div class="col-md-4">
         <div class="row">
           <div class="col-md-6">
-            <h3 class="footer-heading mb-4 text-white">Galeri</h3>
+            <h3 class="footer-heading mb-4 text-white"></h3>
             <ul class="list-unstyled">
+            <h3 class="footer-heading mb-4 text-white"></h3>
+              <ul class="list-unstyled">
               <div class="row">
-                <?php
-                $sql = mysqli_query($conn, "SELECT * FROM galeri");
-                foreach ($sql as $value) {
-                ?>
-                  <div class="col-md-6">
-                    <li><img class="img-fluid" src="images/<?= $value['gambar']; ?>"></li>
-                  </div>
-                <?php
-                }
-                ?>
-              </div>
             </ul>
           </div>
 

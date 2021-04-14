@@ -72,10 +72,10 @@ session_start();
                     </ul>
                   </li>
 
-                  <li class="has-children <?php $aktif = ($_GET['page'] == 'kamar') ? 'active' : '';
-                                          echo $aktif; ?>">
+                  <li class=" <?php $aktif = ($_GET['page'] == 'kamar') ? 'active' : '';
+                              echo $aktif; ?>">
                     <a href="?page=kamar">Galeri</a>
-                    <ul class="dropdown arrow-top">
+                    <!-- <ul class="dropdown arrow-top">
                       <?php
                       $sql = mysqli_query($conn, "SELECT kamar.Jenis FROM kamar");
                       foreach ($sql as $value) {
@@ -84,7 +84,7 @@ session_start();
                       <?php
                       }
                       ?>
-                    </ul>
+                    </ul> -->
                   </li>
                   <!-- <li class="has-children <?php $aktif = ($_GET['page'] == 'reservasi') ? 'active' : '';
                                                 echo $aktif; ?>">
