@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 27, 2021 at 05:05 PM
--- Server version: 10.4.18-MariaDB
--- PHP Version: 8.0.3
+-- Generation Time: Mar 20, 2021 at 04:14 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,8 @@ CREATE TABLE `fasilitas` (
 --
 
 INSERT INTO `fasilitas` (`id_fasilitas`, `jenis`, `deskripsi`, `gambar`) VALUES
-(1, 'Tata tertib', 'Wajib setiap pengunjung mematuhi aturan yang tertera di Tomboan.', 'gambartatatertib.jpg');
+(1, 'Kolam Renang', 'Bar kolam renang dengan penataan unik untuk melewatkan hari dengan secangkir teh atau kopi atau segelas koktail. Memiliki pemandangan laut dan kolam renang yang fantasitis', 'gambartatatertib.jpg'),
+(2, 'Restoran', 'Dengan pemandangan kolam renang dan laut yang indah, Atlantis menyajikan sarapan, makan siang, makan malam dan cemilan lezat menggunakan bahan paling segar untuk pengalaman bersantap yang paling orisinil dan menyenangkan.', 'bar.jpg');
 
 -- --------------------------------------------------------
 
@@ -193,8 +194,7 @@ INSERT INTO `saran` (`id_saran`, `gambar`, `nama`, `email`, `phone`, `pesan`) VA
 (5, 'staff1.jpg', 'Afri Yulianti', 'afriyulianti@gmail.com', '082389132606', 'pelayanan yang sangat bagus!!!'),
 (6, 'ea0c5c95730efd6290ef131ac9ee5ef5e1eebc1e_hq.jpg', 'Annisa Ramadhani', 'annisaramadhani@gmail.com', '082389136678', 'kolam renang yang sangat nyaman'),
 (8, 'images.jpg', 'Nishikino Maki', 'nishikinomaki@gmail.com', '0855643627', 'kolam renang yang menenangkan'),
-(10, 'komen2.jpg', 'kousa honoka', 'kousakahonoka@gmail.com', '98765432', 'menamplkan keindahan sunset dari kamar hotel!!!'),
-(11, 'tumbuhan.JPG', 'Bagus', 'bagus@gmail.com', '08122323', 'Cok');
+(10, 'komen2.jpg', 'kousa honoka', 'kousakahonoka@gmail.com', '98765432', 'menamplkan keindahan sunset dari kamar hotel!!!');
 
 -- --------------------------------------------------------
 
@@ -501,7 +501,7 @@ ALTER TABLE `pelanggan`
 -- AUTO_INCREMENT for table `saran`
 --
 ALTER TABLE `saran`
-  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_saran` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `slider`
