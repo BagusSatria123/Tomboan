@@ -21,7 +21,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6 mx-auto text-center mb-5 section-heading">
-        <h2>Kamar Tersedia</h2>
+        <h2>Tomboan Tersedia</h2>
       </div>
     </div>
     <div class="nonloop-block-15 owl-carousel">

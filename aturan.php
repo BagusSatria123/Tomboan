@@ -44,8 +44,8 @@ if (!isset($_GET['jenis'])) {
 			<div class="container">
 				<div class="row align-items-center justify-content-center">
 					<div class="col-md-7 text-center" data-aos="fade">
-						<span class="caption mb-3">apa saja fasilitas mercure hotel??</span>
-						<h1 class="mb-4">Fasilitas Hotel</h1>
+						<span class="caption mb-3">Aturan</span>
+						<h1 class="mb-4">Aturan-aturan Selama Di Tomboan</h1>
 					</div>
 				</div>
 			</div>
