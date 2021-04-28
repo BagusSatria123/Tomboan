@@ -9,7 +9,7 @@ session_start();
       <div class="py-1">
         <div class="row align-items-center">
           <div class="col-2">
-            <h2 class="mb-0 site-logo"><a href="index.php"><img src="images/Mercure_Logo_2013.png" width="150" height="75"></a></h2>
+            <h2 class="mb-0 site-logo"><a href="index.php"><img src="images/circletomboan.png" width="125" height="125"></a></h2>
           </div>
           <div class="col-10">
             <nav class="site-navigation text-right" role="navigation">
