@@ -18,10 +18,7 @@
         <link rel="stylesheet" href="css/animate.css">
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
-        
-        
-        
-        <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+        <link rel="stylesheet" href="fonts/icon/font/flaticon.css">
         
         <link rel="stylesheet" href="css/aos.css">
         <link rel="stylesheet" href="css/style.css">
