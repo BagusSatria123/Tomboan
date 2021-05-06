@@ -57,38 +57,26 @@
     <div class="row">
       <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="text-center p-4 item">
-          <span class="flaticon-pool display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Kolam Renang</h2>
+          <span class="flaticon-temple display-3 mb-3 d-block text-primary"></span>
+          <h2 class="h5">Situs</h2>
         </div>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="text-center p-4 item">
-          <span class="flaticon-desk display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Resepsionis</h2>
-        </div>
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-        <div class="text-center p-4 item">
-          <span class="flaticon-exit display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Keluar</h2>
+          <span class="flaticon-whisk display-3 mb-3 d-block text-primary"></span>
+          <h2 class="h5">Dapur</h2>
         </div>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="text-center p-4 item">
           <span class="flaticon-parking display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Parkir Mobil</h2>
+          <h2 class="h5">Parkir</h2>
         </div>
       </div>
       <div class="col-sm-4 col-md-4 col-lg-4">
         <div class="text-center p-4 item">
-          <span class="flaticon-minibar display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Minibar</h2>
-        </div>
-      </div>
-      <div class="col-sm-4 col-md-4 col-lg-4">
-        <div class="text-center p-4 item">
-          <span class="flaticon-cab display-3 mb-3 d-block text-primary"></span>
-          <h2 class="h5">Mobil Ke Bandara</h2>
+          <span class="flaticon-matryoshka display-3 mb-3 d-block text-primary"></span>
+          <h2 class="h5">Permainan Tradisional</h2>
         </div>
       </div>
 
