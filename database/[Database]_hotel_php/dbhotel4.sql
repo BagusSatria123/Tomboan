@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 06, 2021 at 05:25 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Apr 27, 2021 at 05:05 PM
+-- Server version: 10.4.18-MariaDB
+-- PHP Version: 8.0.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -63,8 +63,7 @@ INSERT INTO `galeri` (`id_galeri`, `No_Kamar`, `gambar`, `kategori`) VALUES
 (2, 2, 'headetomboan2.JPG', ''),
 (3, 3, 'headetomboan5.JPG', ''),
 (4, 4, 'headetomboan4.JPG', ''),
-(5, 5, 'headetomboan6.JPG', ''),
-(6, 6, 'headetomboan.jpg', '');
+(5, 5, 'headetomboan6.JPG', '');
 
 -- --------------------------------------------------------
 
@@ -112,12 +111,10 @@ CREATE TABLE `kamar` (
 --
 
 INSERT INTO `kamar` (`No_Kamar`, `id_galeri`, `Jenis`, `Type`, `Tarif`, `deskripsi`) VALUES
-('001', 1, 'headertomboan1', 'Single', 2500000, 'headertomboan1'),
-('002', 2, 'headertomboan2', 'Single', 2000000, 'headertomboan2'),
-('003', 3, 'headertomboan3', 'Single', 1000000, 'headertomboan3'),
-('004', 4, 'headertomboan4', 'Single', 1000000, 'headertomboan4'),
-('005', 5, 'headertomboan5', 'Waduh', 0, 'headertomboan5'),
-('6', 6, 'headertomboan6', 'Waduh', 0, 'headertomboan6');
+('001', 1, 'Super Presidents', 'Single', 2500000, 'kamar super president nan mewah yang memiliki sebuah kamar tidur utama dengan kamar mandi en-suite yang mewah, sofa, bak mandi, mantel mandi dan sebuah lemari pakaian. Kamar ini juga memiliki ruang tamu yang dilengkapi dengan fasilitas home theater, TV LCD dengan mini HiFi, ruang makan, dapur, dan kamar mandi tambahan.'),
+('002', 2, 'VIP', 'Single', 2000000, 'kamar VIP mewah yang memiliki sebuah kamar tidur utama dengan kamar mandi yang mewah, bak mandi, mantel mandi dan sebuah lemari pakaian. Kamar ini juga memiliki ruang tamu yang dilengkapi dengan fasilitas  TV LCD.'),
+('003', 3, 'Super VIP', 'Single', 1000000, 'Kamar super VIP memiliki dua tempat tidur berukuran Queen atau satu tempat tidur berukuran King dengan dua sofa permanen yang ideal digunakan untuk bersantai, atau bisa berfungsi sebagai tempat tidur tambahan untuk anak-anak.'),
+('004', 4, 'Deluxe VIP', 'Single', 1000000, 'Kamar Deluxe VIP memiliki tempat tidur berukuran Queen atau satu tempat tidur berukuran King dengan satu sofa permanen yang ideal digunakan untuk bersantai, atau bisa berfungsi sebagai tempat tidur bagi anak-anak.');
 
 -- --------------------------------------------------------
 
@@ -480,7 +477,7 @@ ALTER TABLE `fasilitas`
 -- AUTO_INCREMENT for table `galeri`
 --
 ALTER TABLE `galeri`
-  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_galeri` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `galeri2`
