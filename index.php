@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Hotel Mercure</title>
+        <title>Tomboan</title>
         <script src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="ajax.js"></script>
         <meta charset="utf-8">
@@ -16,6 +16,10 @@
         <link rel="stylesheet" href="css/owl.theme.default.min.css">
         <link rel="stylesheet" href="css/bootstrap-datepicker.css">
         <link rel="stylesheet" href="css/animate.css">
+
+        <!-- Favicons -->
+        <link href="images/circletomboan.png" rel="icon" />
+        <link href="images/circletomboan.png" rel="apple-touch-icon" />
         
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css">
         <link rel="stylesheet" href="fonts/icon/font/flaticon.css">
